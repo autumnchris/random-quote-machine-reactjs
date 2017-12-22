@@ -4,6 +4,7 @@
   "description": "My project for the Build a Random Quote Machine challenge as part of the curriculum for the Front End Development Certification on Free Code Camp. Built with React.",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
