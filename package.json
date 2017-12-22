@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/autumnchris/random-quote-machine-react/issues"
   },
-  "homepage": "https://github.com/autumnchris/random-quote-machine-react#readme"
+  "homepage": "https://github.com/autumnchris/random-quote-machine-react#readme",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
 }
