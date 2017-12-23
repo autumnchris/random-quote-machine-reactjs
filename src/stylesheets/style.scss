@@ -3,3 +3,41 @@ $med-green: #0e818b;
 $light-green: #bef5fa;
 $white: #fff;
 $black: #000;
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  body {
+    color: $dark-green;
+    min-height: 100%;
+    padding-bottom: 60px;
+    position: relative;
+    h1 {
+      font-family: Calligraffitti, cursive;
+      font-size: 2.8rem;
+      font-weight: 900;
+      letter-spacing: 4px;
+      margin: 6% 0 3%;
+    }
+    footer {
+      background-color: $light-green;
+      bottom: 0;
+      color: $black;
+      font-size: 1.2rem;
+      left: 0;
+      letter-spacing: 2px;
+      margin: 0;
+      padding: 12px 0;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      a,
+      a:visited,
+      a:hover,
+      a:active,
+      a:focus {
+        color: $dark-green;
+      }
+    }
+  }
+}
