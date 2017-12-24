@@ -6,13 +6,20 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      quotes: []
+      quotes: [],
+      randomQuote: {}
     };
+  }
+
+  newQuote() {
+    const randomQuote = this.state.quotes[Math.floor(Math.random() * this.state.quotes.length)];
+    this.setState({ randomQuote: randomQuote });
   }
 
   componentDidMount() {
     axios.get('.././src/db/quotes.min.json').then((data) => {
       this.setState({ quotes: data.data });
+      this.newQuote();
     });
   }
 
