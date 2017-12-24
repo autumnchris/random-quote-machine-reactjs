@@ -37,6 +37,33 @@ html {
         margin-top: 5%;
       }
     }
+    .btn,
+    .btn:visited,
+    .btn:active,
+    .btn:focus {
+      background-color: $med-green;
+      color: $white;
+    }
+    .btn:hover {
+      background-color: $dark-green;
+      color: $white;
+    }
+    #tweet,
+    #tweet:visited,
+    #tweet:active,
+    #tweet:focus {
+      border-radius: 20px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-top: 5%;
+    }
+    #new-quote,
+    #new-quote:active,
+    #new-quote:focus {
+      border-radius: 40px;
+      margin-bottom: 5%;
+      padding: 12px 14px;
+    }
     footer {
       background-color: $light-green;
       bottom: 0;
