@@ -4,6 +4,11 @@ $light-green: #bef5fa;
 $white: #fff;
 $black: #000;
 
+*:focus {
+  box-shadow: 0 0 4px 4px rgba(65, 180, 250, 0.8);
+  outline: none !important;
+}
+
 html {
   box-sizing: border-box;
   height: 100%;
