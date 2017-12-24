@@ -19,6 +19,24 @@ html {
       letter-spacing: 4px;
       margin: 6% 0 3%;
     }
+    .well {
+      background-color: $light-green;
+      border: none;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+      line-height: 26px;
+      max-width: 700px;
+      q,
+      q::before,
+      q::after {
+        content: none;
+        font-weight: 500;
+      }
+      #source {
+        font-style: italic;
+        margin-top: 5%;
+      }
+    }
     footer {
       background-color: $light-green;
       bottom: 0;

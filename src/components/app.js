@@ -13,7 +13,7 @@ export default class App extends Component {
 
   newQuote() {
     const randomQuote = this.state.quotes[Math.floor(Math.random() * this.state.quotes.length)];
-    this.setState({ randomQuote: randomQuote });
+    this.setState({ randomQuote });
   }
 
   componentDidMount() {
@@ -29,6 +29,12 @@ export default class App extends Component {
         <header>
           <h1>Inspirational Quotes</h1>
         </header>
+        <main>
+          <div className="well center-block">
+            <span className="fa fa-quote-left"></span><q>&nbsp;{this.state.randomQuote.quote}&nbsp;</q><span className="fa fa-quote-right"></span>
+            <div id="source">&mdash; {this.state.randomQuote.source}</div>
+          </div>
+        </main>
         <footer>Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
       </div>
     );
