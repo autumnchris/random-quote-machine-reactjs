@@ -8,6 +8,17 @@ My project for the [Build a Random Quote Machine challenge](https://www.freecode
 1. I can click a button to show me a new random quote.
 2. I can press a button to tweet out a quote.
 
+## Built with
+* [React](https://reactjs.org)
+* [Webpack](https://webpack.js.org)
+* [Sass](http://sass-lang.com)
+* [axios](https://github.com/axios/axios)
+* JSON
+* [Babel](https://babeljs.io)
+* [Bootstrap](https://getbootstrap.com)
+* [Font Awesome](http://fontawesome.io)
+* [Google Fonts](https://fonts.google.com)
+
 ## Demo
 
 View project demo at [https://autumnchris.github.io/random-quote-machine-react](https://autumnchris.github.io/random-quote-machine-react).
