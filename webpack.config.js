@@ -20,6 +20,13 @@ module.exports = {
         }
       },
       {
+        test: /\.json$/,
+        loader: 'url-loader',
+        options: {
+          limit: 25000,
+        }
+      },
+      {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract({
           use:['css-loader', 'sass-loader'],

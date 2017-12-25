@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import quotes from '.././db/quotes.min.json';
 
 export default class App extends Component {
 
@@ -17,7 +18,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('.././src/db/quotes.min.json').then((data) => {
+    axios.get(quotes).then((data) => {
       this.setState({ quotes: data.data });
       this.newQuote();
     });
