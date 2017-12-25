@@ -7,3 +7,18 @@ My project for the [Build a Random Quote Machine challenge](https://www.freecode
 ## User Stories
 1. I can click a button to show me a new random quote.
 2. I can press a button to tweet out a quote.
+
+## Demo
+
+View project demo at [https://autumnchris.github.io/random-quote-machine-react](https://autumnchris.github.io/random-quote-machine-react).
+
+## Installation
+
+```
+git clone https://github.com/autumnchris/random-quote-machine-react.git
+cd random-quote-machine-react
+npm install
+npm start
+```
+
+Go to `http://localhost:8080`.
