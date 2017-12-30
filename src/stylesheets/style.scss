@@ -89,5 +89,9 @@ html {
         color: $dark-green;
       }
     }
+    .alert-warning {
+      display: none;
+      margin: 3%;
+    }
   }
 }
