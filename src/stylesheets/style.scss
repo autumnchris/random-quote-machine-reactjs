@@ -48,10 +48,10 @@ html {
     .btn:focus {
       background-color: $med-green;
       color: $white;
-    }
-    .btn:hover {
-      background-color: $dark-green;
-      color: $white;
+      &:hover {
+        background-color: $dark-green;
+        color: $white;
+      }
     }
     #tweet,
     #tweet:visited,
