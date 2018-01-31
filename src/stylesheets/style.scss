@@ -4,13 +4,16 @@ $light-green: #bef5fa;
 $white: #fff;
 $black: #000;
 
+* {
+  box-sizing: border-box;
+}
+
 *:focus {
   box-shadow: 0 0 4px 4px rgba(65, 180, 250, 0.8);
   outline: none !important;
 }
 
 html {
-  box-sizing: border-box;
   height: 100%;
   body {
     color: $dark-green;
@@ -65,7 +68,7 @@ html {
     #new-quote,
     #new-quote:active,
     #new-quote:focus {
-      border-radius: 40px;
+      border-radius: 100%;
       margin-bottom: 5%;
       padding: 12px 14px;
     }
