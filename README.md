@@ -16,7 +16,7 @@ My project for the [Build a Random Quote Machine challenge](https://www.freecode
 * JSON
 * [Babel](https://babeljs.io)
 * [Bootstrap](https://getbootstrap.com)
-* [Font Awesome](http://fontawesome.io)
+* [Font Awesome](https://fontawesome.com)
 * [Google Fonts](https://fonts.google.com)
 
 ## Demo
