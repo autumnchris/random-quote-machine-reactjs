@@ -12,7 +12,7 @@ export default class App extends Component {
     };
   }
 
-  newQuote() {
+  getQuote() {
     const randomQuote = this.state.quotes[Math.floor(Math.random() * this.state.quotes.length)];
     this.setState({ randomQuote });
   }
@@ -20,7 +20,7 @@ export default class App extends Component {
   componentDidMount() {
     axios.get(Quotes).then((data) => {
       this.setState({ quotes: data.data });
-      this.newQuote();
+      this.getQuote();
     }).catch((error) => {
       document.getElementById('success').style.display = 'none';
       document.getElementById('error').style.display = 'block';
@@ -42,7 +42,7 @@ export default class App extends Component {
                 <a className="btn" href={`https://twitter.com/intent/tweet?text="${this.state.randomQuote.quote}" — ${this.state.randomQuote.source}`} target="_blank" id="tweet"><span className="fa fa-twitter fa-lg"></span> Tweet</a>
               </div>
             </div>
-            <button type="button" className="btn btn-lg" id="new-quote" onClick={() => this.newQuote()}>
+            <button type="button" className="btn btn-lg" id="new-quote" onClick={() => this.getQuote()}>
               <span className="fa fa-repeat fa-2x"></span>
               <span className="sr-only">load new quote</span>
             </button>
