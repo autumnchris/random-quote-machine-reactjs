@@ -22,15 +22,15 @@ export default class App extends Component {
       this.setState({ quotes: data.data });
       this.getQuote();
     }).catch((error) => {
-      document.getElementById('success').style.display = 'none';
-      document.getElementById('error').style.display = 'block';
+      document.querySelector('.success').style.display = 'none';
+      document.querySelector('.error').style.display = 'block';
     });
   }
 
   render() {
     return (
       <div className="container-fluid text-center">
-        <div id="success">
+        <div className="success">
           <header>
             <h1>Inspirational Quotes</h1>
           </header>
@@ -51,7 +51,7 @@ export default class App extends Component {
           </main>
           <footer>Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
         </div>
-        <div className="alert alert-warning" id="error"><span className="fa fa-warning fa-lg fa-fw"></span> Unable to load a new quote.</div>
+        <div className="alert alert-warning error"><span className="fa fa-warning fa-lg fa-fw"></span> Unable to load a new quote.</div>
       </div>
     );
   }
