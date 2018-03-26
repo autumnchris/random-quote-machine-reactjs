@@ -36,13 +36,15 @@ export default class App extends Component {
           </header>
           <main>
             <div className="well center-block">
-              <span className="fa fa-quote-left"></span><q> {this.state.randomQuote.quote} </q><span className="fa fa-quote-right"></span>
-              <div id="source">&mdash; {this.state.randomQuote.source}</div>
+              <span className="fa fa-quote-left"></span>
+              <q> {this.state.randomQuote.quote} </q>
+              <span className="fa fa-quote-right"></span>
+              <div className="source">&mdash; {this.state.randomQuote.source}</div>
               <div className="text-right">
-                <a className="btn" href={`https://twitter.com/intent/tweet?text="${this.state.randomQuote.quote}" — ${this.state.randomQuote.source}`} target="_blank" id="tweet"><span className="fa fa-twitter fa-lg"></span> Tweet</a>
+                <a className="btn tweet" href={`https://twitter.com/intent/tweet?text="${this.state.randomQuote.quote}" — ${this.state.randomQuote.source}`} target="_blank"><span className="fa fa-twitter fa-lg"></span> Tweet</a>
               </div>
             </div>
-            <button type="button" className="btn btn-lg" title="New Quote" id="new-quote" onClick={() => this.getQuote()}>
+            <button type="button" className="btn btn-lg new-quote" title="New Quote" onClick={() => this.getQuote()}>
               <span className="fa fa-repeat fa-2x"></span>
               <span className="sr-only">load new quote</span>
             </button>
