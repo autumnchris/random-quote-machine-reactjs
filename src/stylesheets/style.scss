@@ -3,89 +3,91 @@ $med-green: #0e818b;
 $med-light-green: #bef5fa;
 $light-green: #e7fbfd;
 $white: #fff;
-$black: #000;
-
-* {
-  box-sizing: border-box;
-}
+$dark-yellow: #8a6d3b;
+$med-yellow: #faebcc;
+$light-yellow: #fcf8e3;
 
 *:focus {
   box-shadow: 0 0 4px 4px rgba(65, 180, 250, 0.8);
-  outline: none !important;
+  outline: none;
 }
 
 html {
-  height: 100%;
+  background: $white;
+  background: linear-gradient(120deg, rgba(190, 245, 250, 0.2), $white) fixed;
   body {
-    background: $white;
-    background: linear-gradient(120deg, rgba(190, 245, 250, 0.2), $white) fixed;
-    color: $dark-green;
-    min-height: 100%;
-    padding-bottom: 60px;
-    position: relative;
+    text-align: center;
     h1 {
+      color: $dark-green;
       font-family: Calligraffitti, cursive;
-      font-size: 2.8rem;
+      font-size: 1.7rem;
       font-weight: 900;
       letter-spacing: 4px;
-      margin: 6% 0 3%;
+      padding-top: 6%;
+      padding-bottom: 2%;
     }
-    .well {
-      background: $med-light-green;
-      background: linear-gradient($med-light-green, $light-green) fixed;
-      border: none;
-      font-size: 1.2em;
-      letter-spacing: 1px;
-      line-height: 26px;
-      max-width: 700px;
-      q,
-      q::before,
-      q::after {
-        content: none;
-        font-weight: 500;
+    main {
+      padding-bottom: 60px;
+      .card {
+        background: $med-light-green;
+        background: linear-gradient($med-light-green, $light-green) fixed;
+        border-radius: 5px;
+        margin: 20px auto;
+        max-width: 700px;
+        padding: 20px;
+        .quote,
+        q {
+          color: $dark-green;
+          font-size: 1.1rem;
+          font-weight: 600;
+          line-height: 26px;
+        }
+        .source {
+          color: $dark-green;
+          font-style: italic;
+          line-height: 20px;
+          margin-top: 5%;
+        }
+        .tweet-button {
+          margin-top: 8%;
+          text-align: right;
+          .tweet,
+          .tweet:visited,
+          .tweet:active,
+          .tweet:focus {
+            background: $med-green;
+            border-radius: 20px;
+            color: $white;
+            font-size: 0.8rem;
+            padding: 8px 10px;
+            &:hover {
+              background: $dark-green;
+              text-decoration: none;
+            }
+          }
+        }
       }
-      .source {
-        font-style: italic;
-        margin-top: 5%;
-      }
-    }
-    .btn,
-    .btn:visited,
-    .btn:active,
-    .btn:focus {
-      background-color: $med-green;
-      color: $white;
-      &:hover {
-        background-color: $dark-green;
+      .new-quote,
+      .new-quote:active,
+      .new-quote:focus {
+        background: $med-green;
+        border-radius: 100%;
         color: $white;
+        margin-bottom: 5%;
+        padding: 14px;
+        &:hover {
+          background: $dark-green;
+        }
       }
-    }
-    .tweet,
-    .tweet:visited,
-    .tweet:active,
-    .tweet:focus {
-      border-radius: 20px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      margin-top: 5%;
-    }
-    .new-quote,
-    .new-quote:active,
-    .new-quote:focus {
-      border-radius: 100%;
-      margin-bottom: 5%;
-      padding: 12px 14px;
     }
     footer {
       background: $med-light-green;
       background: linear-gradient(to right, $med-light-green, $light-green) fixed;
       bottom: 0;
-      color: $black;
-      font-size: 1.2rem;
+      font-size: 0.8rem;
       left: 0;
       letter-spacing: 2px;
-      margin: 0;
-      padding: 12px 0;
+      padding: 14px 0;
       position: absolute;
       right: 0;
       width: 100%;
@@ -97,9 +99,16 @@ html {
         color: $dark-green;
       }
     }
-    .error {
+    .error-message {
+      background: $light-yellow;
+      border: 1px solid $med-yellow;
+      border-radius: 3px;
+      color: $dark-yellow;
       display: none;
-      margin: 3%;
+      line-height: 20px;
+      margin: 30px auto;
+      max-width: 500px;
+      padding: 15px 10px;
     }
   }
 }
