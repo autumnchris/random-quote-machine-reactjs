@@ -3,9 +3,6 @@ $med-green: #0e818b;
 $med-light-green: #bef5fa;
 $light-green: #e7fbfd;
 $white: #fff;
-$dark-yellow: #8a6d3b;
-$med-yellow: #faebcc;
-$light-yellow: #fcf8e3;
 
 *:focus {
   box-shadow: 0 0 4px 4px rgba(65, 180, 250, 0.8);
@@ -96,16 +93,5 @@ html {
     a:focus {
       color: $dark-green;
     }
-  }
-  .error-message {
-    background: $light-yellow;
-    border: 1px solid $med-yellow;
-    border-radius: 3px;
-    color: $dark-yellow;
-    display: none;
-    line-height: 20px;
-    margin: 30px auto;
-    max-width: 500px;
-    padding: 15px 10px;
   }
 }

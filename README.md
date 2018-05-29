@@ -12,8 +12,6 @@ My project for the [Build a Random Quote Machine challenge](https://www.freecode
 * [React](https://reactjs.org)
 * [Webpack](https://webpack.js.org)
 * [Sass](http://sass-lang.com)
-* [axios](https://github.com/axios/axios)
-* JSON
 * [Babel](https://babeljs.io)
 * [Font Awesome](https://fontawesome.com)
 * [Google Fonts](https://fonts.google.com)
