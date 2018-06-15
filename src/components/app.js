@@ -115,25 +115,30 @@ export default class App extends Component {
   render() {
     return (
       <div className="body">
+        {/* HEADER */}
         <header>
           <h1>Inspirational Quotes</h1>
         </header>
         <main>
           <div className="card">
+            {/* QUOTE & SOURCE */}
             <div className="quote">
               <span className="fa fa-quote-left"></span>
               <q> {this.state.randomQuote.quote} </q>
               <span className="fa fa-quote-right"></span>
             </div>
             <div className="source">&mdash; {this.state.randomQuote.source}</div>
+            {/* TWEET BUTTON */}
             <div className="tweet-button">
               <a className="tweet" href={`https://twitter.com/intent/tweet?text="${this.state.randomQuote.quote}" — ${this.state.randomQuote.source}`} target="_blank"><span className="fab fa-twitter"></span> Tweet</a>
             </div>
           </div>
+          {/* NEW QUOTE BUTTON */}
           <button type="button" className="new-quote" aria-label="load new quote" title="New Quote" onClick={() => this.getQuote()}>
             <span className="fa fa-redo-alt fa-2x"></span>
           </button>
         </main>
+        {/* FOOTER */}
         <footer>Coded by <a href="../portfolio" target="_blank">Autumn Bullard</a></footer>
       </div>
     );
