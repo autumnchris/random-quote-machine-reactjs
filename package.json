@@ -1,7 +1,7 @@
 {
   "name": "random-quote-machine-react",
   "version": "1.0.0",
-  "description": "My project for the Build a Random Quote Machine challenge as part of the curriculum for the Front End Development Certification on Free Code Camp. Built with React.",
+  "description": "My project for the Build a Random Quote Machine challenge as part of the curriculum for the Front End Libraries Certification on Free Code Camp. Built with React.",
   "main": "index.js",
   "scripts": {
     "build": "webpack -p",
