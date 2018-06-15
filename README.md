@@ -4,7 +4,7 @@ My project for the [Build a Random Quote Machine challenge](https://learn.freeco
 
 ---
 
-## Built with
+## Built With
 * [React](https://reactjs.org)
 * [Webpack](https://webpack.js.org)
 * [Sass](http://sass-lang.com)
