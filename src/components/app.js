@@ -97,10 +97,6 @@ export default class App extends Component {
         {
           quote: 'All young people regardless of sexual orientation or identity, deserve a safe and supportive environment in which to achieve their full potential.',
           source: 'Harvey Milk'
-        },
-        {
-          quote: 'If you make decisions out of fear you are more likely to be wrong.',
-          source: 'Ahsoka Tano in Star Wars: The Clone Wars (2008)'
         }
       ],
       randomQuote: {}
