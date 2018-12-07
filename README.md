@@ -1,11 +1,11 @@
-# Random Quote Machine (React)
+# Random Quote Machine (React.js)
 
-My project for the [Build a Random Quote Machine challenge](https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-random-quote-machine) as part of the curriculum for the Front End Libraries Certification on [Free Code Camp](https://www.freecodecamp.org). Built with React.
+My project for the [Build a Random Quote Machine challenge](https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-random-quote-machine) as part of the curriculum for the Front End Libraries Certification on [Free Code Camp](https://www.freecodecamp.org). Built with React.js.
 
 ---
 
 ## Built With
-* [React](https://reactjs.org)
+* [React.js](https://reactjs.org)
 * [Webpack](https://webpack.js.org)
 * [Sass](http://sass-lang.com)
 * [Babel](https://babeljs.io)
@@ -14,13 +14,13 @@ My project for the [Build a Random Quote Machine challenge](https://learn.freeco
 
 ## Demo
 
-View project demo at [https://autumnchris.github.io/random-quote-machine-react](https://autumnchris.github.io/random-quote-machine-react).
+View project demo at [https://autumnchris.github.io/random-quote-machine-reactjs](https://autumnchris.github.io/random-quote-machine-reactjs).
 
 ## Installation
 
 ```
-$ git clone https://github.com/autumnchris/random-quote-machine-react.git
-$ cd random-quote-machine-react
+$ git clone https://github.com/autumnchris/random-quote-machine-reactjs.git
+$ cd random-quote-machine-reactjs
 $ npm install
 $ npm start
 ```
