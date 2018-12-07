@@ -1,10 +1,5 @@
+@import 'variables';
 @import 'reset';
-
-$dark-green: #0b6b74;
-$med-green: #0e818b;
-$med-light-green: #bef5fa;
-$light-green: #e7fbfd;
-$white: #fff;
 
 *:focus {
   box-shadow: 0 0 4px 4px rgba(65, 180, 250, 0.8);
@@ -16,7 +11,7 @@ html {
   background: linear-gradient(120deg, rgba(190, 245, 250, 0.2), $white) fixed;
   h1 {
     color: $dark-green;
-    font-family: Calligraffitti, cursive;
+    font-family: $heading-font;
     font-size: 1.7rem;
     font-weight: 900;
     letter-spacing: 4px;
