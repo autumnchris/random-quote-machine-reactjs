@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/autumnchris/random-quote-machine-react.git"
+    "url": "git+https://github.com/autumnchris/random-quote-machine-reactjs.git"
   },
   "author": "autumnchris",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/autumnchris/random-quote-machine-react/issues"
+    "url": "https://github.com/autumnchris/random-quote-machine-reactjs/issues"
   },
-  "homepage": "https://autumnchris.github.io/random-quote-machine-react",
+  "homepage": "https://autumnchris.github.io/random-quote-machine-reactjs",
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
