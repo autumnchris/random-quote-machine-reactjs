@@ -134,7 +134,7 @@ export default class App extends Component {
             <div className="source">&mdash; {this.state.randomQuote.source}</div>
             {/* TWEET BUTTON */}
             <div className="tweet-button">
-              <a className="tweet" href={`https://twitter.com/intent/tweet?text="${this.state.randomQuote.quote}" — ${this.state.randomQuote.source}`} target="_blank"><span className="fab fa-twitter"></span> Tweet</a>
+              <a className="tweet twitter-share-button" href={`https://twitter.com/intent/tweet?text="${this.state.randomQuote.quote}" — ${this.state.randomQuote.source}`} target="_blank" data-size="large"><span className="fab fa-twitter"></span> Tweet</a>
             </div>
           </div>
           {/* NEW QUOTE BUTTON */}
