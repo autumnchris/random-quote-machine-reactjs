@@ -97,6 +97,10 @@ export default class App extends Component {
         {
           quote: 'All young people regardless of sexual orientation or identity, deserve a safe and supportive environment in which to achieve their full potential.',
           source: 'Harvey Milk'
+        },
+        {
+          quote: 'Develop a strong opinion about yourself so that you don\'t accidentally start believing what others say about you.',
+          source: 'Akin Olokun'
         }
       ],
       randomQuote: {}
