@@ -1,6 +1,6 @@
 # Random Quote Machine (React.js)
 
-My project for the [Build a Random Quote Machine challenge](https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-random-quote-machine) as part of the curriculum for the Front End Libraries Certification on [Free Code Camp](https://www.freecodecamp.org). Built with React.js.
+My project for the [Build a Random Quote Machine challenge](https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-random-quote-machine) as part of the curriculum for the Front End Libraries Certification on [freeCodeCamp](https://www.freecodecamp.org). Built with React.js.
 
 ---
 
