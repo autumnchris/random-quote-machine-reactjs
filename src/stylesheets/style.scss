@@ -2,15 +2,15 @@
 @import "reset";
 
 *:focus {
-  box-shadow: 0 0 4px 4px rgba(65, 180, 250, 0.8);
+  box-shadow: 0 0 4px 4px hsla(203, 95%, 62%, 0.8);
   outline: none;
 }
 
 html {
-  background: change-color($grayscale, $lightness: 100%);
-  background: linear-gradient(120deg, rgba(change-color($teal, $lightness: 86%), 0.2), change-color($grayscale, $lightness: 100%)) fixed;
+  background: change-color($black, $lightness: 100%);
+  background: linear-gradient(120deg, rgba(change-color($teal, $lightness: 86%), 0.2), change-color($black, $lightness: 100%)) fixed;
   h1 {
-    color: change-color($teal, $lightness: 25%);
+    color: $teal;
     font-family: $heading-font;
     font-size: 1.7rem;
     font-weight: 900;
@@ -29,13 +29,13 @@ html {
       padding: 20px;
       .quote,
       q {
-        color: change-color($teal, $lightness: 25%);
+        color: $teal;
         font-size: 1.1rem;
         font-weight: 600;
         line-height: 26px;
       }
       .source {
-        color: change-color($teal, $lightness: 25%);
+        color: $teal;
         font-style: italic;
         line-height: 20px;
         margin-top: 5%;
@@ -49,11 +49,11 @@ html {
         .tweet:focus {
           background: change-color($teal, $lightness: 30%);
           border-radius: 20px;
-          color: change-color($grayscale, $lightness: 100%);
+          color: change-color($black, $lightness: 100%);
           font-size: 0.8rem;
           padding: 8px 10px;
           &:hover {
-            background: change-color($teal, $lightness: 25%);
+            background: $teal;
             text-decoration: none;
           }
         }
@@ -64,11 +64,11 @@ html {
     .new-quote:focus {
       background: change-color($teal, $lightness: 30%);
       border-radius: 100%;
-      color: change-color($grayscale, $lightness: 100%);
+      color: change-color($black, $lightness: 100%);
       margin-bottom: 5%;
       padding: 14px;
       &:hover {
-        background: change-color($teal, $lightness: 25%);
+        background: $teal;
       }
     }
   }
@@ -88,7 +88,7 @@ html {
     a:hover,
     a:active,
     a:focus {
-      color: change-color($teal, $lightness: 25%);
+      color: $teal;
     }
   }
 }
