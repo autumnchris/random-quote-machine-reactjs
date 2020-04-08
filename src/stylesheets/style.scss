@@ -1,94 +1,150 @@
 @import "variables";
-@import "reset";
 
 *:focus {
   box-shadow: 0 0 4px 4px hsla(203, 95%, 62%, 0.8);
   outline: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+a,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  color: $teal;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button,
+button:hover,
+button:active,
+button:focus {
+  border: 0;
+  cursor: pointer;
+}
+
+.button,
+.button:visited,
+.button:hover,
+.button:active,
+.button:focus {
+  background: change-color($teal, $lightness: 30%);
+  border-radius: 20px;
+  color: change-color($black, $lightness: 100%);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 14px;
+  &:hover {
+    background: $teal;
+    text-decoration: none;
+  }
+}
+
+.message {
+  border-radius: 5px;
+  margin: auto;
+  max-width: 800px;
+  padding: 15px 10px;
+}
+
 html {
   background: change-color($black, $lightness: 100%);
   background: linear-gradient(120deg, rgba(change-color($teal, $lightness: 86%), 0.2), change-color($black, $lightness: 100%)) fixed;
-  h1 {
-    color: $teal;
-    font-family: $heading-font;
-    font-size: 1.7rem;
-    font-weight: 900;
-    letter-spacing: 4px;
-    padding-top: 6%;
-    padding-bottom: 2%;
-  }
-  main {
-    padding-bottom: 60px;
-    .card {
-      background: change-color($teal, $lightness: 86%);
-      background: linear-gradient(change-color($teal, $lightness: 86%), change-color($teal, $lightness: 95%)) fixed;
-      border-radius: 5px;
-      margin: 20px auto;
-      max-width: 700px;
-      padding: 20px;
-      .quote,
-      q {
-        color: $teal;
-        font-size: 1.1rem;
-        font-weight: 600;
-        line-height: 26px;
-      }
-      .source {
-        color: $teal;
-        font-style: italic;
-        line-height: 20px;
-        margin-top: 5%;
-      }
-      .tweet-button {
-        margin-top: 8%;
-        text-align: right;
-        .tweet,
-        .tweet:visited,
-        .tweet:active,
-        .tweet:focus {
-          background: change-color($teal, $lightness: 30%);
-          border-radius: 20px;
-          color: change-color($black, $lightness: 100%);
-          font-size: 0.8rem;
-          padding: 8px 10px;
-          &:hover {
-            background: $teal;
-            text-decoration: none;
+  box-sizing: border-box;
+  color: change-color($black, $lightness: 20%);
+  height: 100%;
+  letter-spacing: 1px;
+  text-align: center;
+  body {
+    min-height: 100%;
+    padding: 0 20px;
+    position: relative;
+    h1 {
+      color: $teal;
+      font-family: $heading-font;
+      font-size: 1.7rem;
+      font-weight: 900;
+      letter-spacing: 4px;
+      line-height: 1.45;
+      padding-top: 6%;
+    }
+    main {
+      padding-bottom: 6rem;
+      .card {
+        background: change-color($teal, $lightness: 86%);
+        background: linear-gradient(change-color($teal, $lightness: 86%), change-color($teal, $lightness: 95%)) fixed;
+        border-radius: 5px;
+        margin: 20px auto;
+        max-width: 700px;
+        padding: 20px;
+        .quote,
+        .quote q {
+          color: $teal;
+          font-size: 1.1rem;
+          font-weight: 600;
+          line-height: 26px;
+          quotes: none;
+          &:before,
+          &:after {
+            content: none;
+          }
+        }
+        .source {
+          color: $teal;
+          font-style: italic;
+          line-height: 20px;
+          margin-top: 5%;
+        }
+        .tweet-div {
+          margin-top: 8%;
+          text-align: right;
+          .tweet,
+          .tweet:visited,
+          .tweet:active,
+          .tweet:focus {
+            background: $tweet-blue;
+            border-radius: 4px;
+            color: change-color($black, $lightness: 100%);
+            font-family: "Helvetica Neue", sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0;
+            padding: 8px 10px;
+            &:hover {
+              background: $tweet-blue-hover;
+              text-decoration: none;
+            }
           }
         }
       }
-    }
-    .new-quote,
-    .new-quote:active,
-    .new-quote:focus {
-      background: change-color($teal, $lightness: 30%);
-      border-radius: 100%;
-      color: change-color($black, $lightness: 100%);
-      margin-bottom: 5%;
-      padding: 14px;
-      &:hover {
-        background: $teal;
+      .error-message {
+        background: change-color($error-red, $lightness: 95%);
+        border: 1px solid change-color($error-red, $lightness: 90%);
+        color: $error-red;
       }
     }
-  }
-  footer {
-    background: change-color($teal, $lightness: 86%);
-    background: linear-gradient(to right, change-color($teal, $lightness: 86%), change-color($teal, $lightness: 95%)) fixed;
-    bottom: 0;
-    font-size: 0.8rem;
-    left: 0;
-    letter-spacing: 2px;
-    padding: 14px 0;
-    position: absolute;
-    right: 0;
-    width: 100%;
-    a,
-    a:visited,
-    a:hover,
-    a:active,
-    a:focus {
-      color: $teal;
+    footer {
+      background: change-color($teal, $lightness: 86%);
+      background: linear-gradient(to right, change-color($teal, $lightness: 86%), change-color($teal, $lightness: 95%)) fixed;
+      bottom: 0;
+      font-size: 0.8rem;
+      left: 0;
+      letter-spacing: 2px;
+      padding: 14px 0;
+      position: absolute;
+      right: 0;
+      width: 100%;
     }
   }
 }

@@ -2,10 +2,10 @@
   "name": "random-quote-machine-reactjs",
   "version": "1.0.0",
   "description": "My project for the Build a Random Quote Machine challenge as part of the curriculum for the Front End Libraries Certification on freeCodeCamp. Built with React.js.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open",
+    "start": "npm run build && node server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,14 +17,18 @@
   "bugs": {
     "url": "https://github.com/autumnchris/random-quote-machine-reactjs/issues"
   },
-  "homepage": "https://autumnchris.github.io/random-quote-machine-reactjs",
+  "homepage": "https://autumnchris-quotes-reactjs.herokuapp.com",
   "dependencies": {
+    "axios": "^0.19.2",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.1",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
     "mini-css-extract-plugin": "^0.5.0",
+    "mongoose": "^5.9.7",
     "node-sass": "^4.13.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -32,6 +36,7 @@
     "style-loader": "^0.21.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0"
   }
 }
