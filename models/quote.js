@@ -8,7 +8,8 @@ const QuoteSchema = Schema({
   },
   source: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   }
 });
 
