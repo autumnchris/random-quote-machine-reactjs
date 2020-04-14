@@ -39,8 +39,8 @@ export default class App extends Component {
             <span className="fa fa-quote-right"></span>
           </div>
           <div className="source">&mdash; {this.state.randomQuote.source}</div>
-          <div className="tweet-div">
-            <a className="tweet" href={`https://twitter.com/intent/tweet?text="${this.state.randomQuote.quote}" — ${this.state.randomQuote.source}`} target="_blank"><span className="fab fa-twitter fa-fw"></span> Tweet</a>
+          <div className="tweet-container">
+            <a className="button tweet" href={`https://twitter.com/intent/tweet?text="${this.state.randomQuote.quote}" — ${this.state.randomQuote.source}`} target="_blank"><span className="fab fa-twitter fa-fw"></span> Tweet</a>
           </div>
         </div>
         <p className="message error-message" style={this.state.errorStyle}><span className="fa fa-exclamation-circle fa-lg fa-fw"></span> Unable to load a new quote.</p>
