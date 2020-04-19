@@ -94,7 +94,9 @@ textarea:focus,
   color: change-color($black, $lightness: 100%);
   cursor: pointer;
   font-weight: 600;
+  line-height: normal;
   padding: 10px 14px;
+  width: auto;
   &:hover {
     background: $teal;
     text-decoration: none;
