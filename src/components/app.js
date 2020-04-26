@@ -6,7 +6,8 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      randomQuote: {},
+      quote: '',
+      source: '',
       quoteCardStyle: {display: 'none'},
       errorStyle: {display: 'none'}
     };
@@ -15,7 +16,8 @@ export default class App extends Component {
   getQuote() {
     axios.get('/api/new-quote').then(randomQuote => {
       this.setState({
-        randomQuote: randomQuote.data,
+        quote: randomQuote.data.quote,
+        source: randomQuote.data.source,
         quoteCardStyle: {display: 'block'}
       });
     }).catch(() => {
@@ -35,12 +37,12 @@ export default class App extends Component {
         <div className="card" style={this.state.quoteCardStyle}>
           <div className="quote">
             <span className="fa fa-quote-left"></span>
-            <q> {this.state.randomQuote.quote} </q>
+            <q> {this.state.quote} </q>
             <span className="fa fa-quote-right"></span>
           </div>
-          <div className="source">&mdash; {this.state.randomQuote.source}</div>
+          <div className="source">&mdash; {this.state.source}</div>
           <div className="tweet-container">
-            <a className="button tweet" href={`https://twitter.com/intent/tweet?text="${this.state.randomQuote.quote}" — ${this.state.randomQuote.source}`} target="_blank"><span className="fab fa-twitter fa-fw"></span> Tweet</a>
+            <a className="button tweet" href={`https://twitter.com/intent/tweet?text="${this.state.quote}" — ${this.state.source}`} target="_blank"><span className="fab fa-twitter fa-fw"></span> Tweet</a>
           </div>
         </div>
         <p className="message error-message" style={this.state.errorStyle}><span className="fa fa-exclamation-circle fa-lg fa-fw"></span> Unable to load a new quote.</p>
