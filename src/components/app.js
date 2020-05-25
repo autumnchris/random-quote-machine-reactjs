@@ -45,7 +45,7 @@ export default class App extends Component {
             <a className="button tweet" href={`https://twitter.com/intent/tweet?text="${this.state.quote}" — ${this.state.source}`} target="_blank"><span className="fab fa-twitter fa-fw"></span> Tweet</a>
           </div>
         </div>
-        <p className="message error-message" style={this.state.errorStyle}><span className="fa fa-exclamation-circle fa-lg fa-fw"></span> Unable to load a new quote.</p>
+        <p className="message error-message" style={this.state.errorStyle}><span className="fa fa-exclamation-circle fa-lg fa-fw"></span> Unable to load a new quote at this time.</p>
         <button type="button" className="button new-quote" onClick={() => this.getQuote()}>New Quote</button>
       </main>
     );
