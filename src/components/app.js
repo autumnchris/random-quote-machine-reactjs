@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import axios from 'axios';
 
-export default class App extends Component {
+class App extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
       quote: '',
       source: '',
-      quoteCardStyle: {display: 'none'},
-      errorStyle: {display: 'none'}
+      loadingError: false
     };
   }
 
@@ -18,11 +17,11 @@ export default class App extends Component {
       this.setState({
         quote: randomQuote.data.quote,
         source: randomQuote.data.source,
-        quoteCardStyle: {display: 'block'}
+        loadingError: false
       });
     }).catch(() => {
       this.setState({
-        errorStyle: {display: 'block'}
+        loadingError: true
       });
     });
   }
@@ -32,22 +31,31 @@ export default class App extends Component {
   }
 
   render() {
-    return (
-      <main>
-        <div className="card" style={this.state.quoteCardStyle}>
-          <div className="quote">
-            <span className="fa fa-quote-left"></span>
-            <q> {this.state.quote} </q>
-            <span className="fa fa-quote-right"></span>
+
+    if (this.state.loadingError) {
+      return (
+        <p className="message error-message"><span className="fa fa-exclamation-circle fa-lg fa-fw"></span> Unable to load a new quote at this time.</p>
+      );
+    }
+    else {
+      return (
+        <React.Fragment>
+          <div className="quote-container">
+            <div className="quote">
+              <span className="fa fa-quote-left"></span>
+              <q> {this.state.quote} </q>
+              <span className="fa fa-quote-right"></span>
+            </div>
+            <div className="source">&mdash; {this.state.source}</div>
+            <div className="tweet-container">
+              <a className="button tweet" href={`https://twitter.com/intent/tweet?text="${this.state.quote}" — ${this.state.source}`} target="_blank"><span className="fab fa-twitter fa-fw"></span> Tweet</a>
+            </div>
           </div>
-          <div className="source">&mdash; {this.state.source}</div>
-          <div className="tweet-container">
-            <a className="button tweet" href={`https://twitter.com/intent/tweet?text="${this.state.quote}" — ${this.state.source}`} target="_blank"><span className="fab fa-twitter fa-fw"></span> Tweet</a>
-          </div>
-        </div>
-        <p className="message error-message" style={this.state.errorStyle}><span className="fa fa-exclamation-circle fa-lg fa-fw"></span> Unable to load a new quote at this time.</p>
-        <button type="button" className="button new-quote" onClick={() => this.getQuote()}>New Quote</button>
-      </main>
-    );
+          <button type="button" className="button new-quote" onClick={() => this.getQuote()}>New Quote</button>
+        </React.Fragment>
+      );
+    }
   }
 }
+
+export default App;
