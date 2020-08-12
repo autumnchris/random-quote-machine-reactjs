@@ -6,8 +6,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      quote: '',
-      source: '',
+      randomQuote: {
+        quote: '',
+        source: ''
+      },
       loadingError: false
     };
   }
@@ -15,8 +17,10 @@ class App extends React.Component {
   getQuote() {
     axios.get('/api/new-quote').then(randomQuote => {
       this.setState({
-        quote: randomQuote.data.quote,
-        source: randomQuote.data.source,
+        randomQuote: {
+          quote: randomQuote.data.quote,
+          source: randomQuote.data.source
+        },
         loadingError: false
       });
     }).catch(() => {
@@ -43,12 +47,12 @@ class App extends React.Component {
           <div className="quote-container">
             <div className="quote">
               <span className="fa fa-quote-left"></span>
-              <q> {this.state.quote} </q>
+              <q> {this.state.randomQuote.quote} </q>
               <span className="fa fa-quote-right"></span>
             </div>
-            <div className="source">&mdash; {this.state.source}</div>
+            <div className="source">&mdash; {this.state.randomQuote.source}</div>
             <div className="tweet-container">
-              <a className="button tweet" href={`https://twitter.com/intent/tweet?text="${this.state.quote}" — ${this.state.source}`} target="_blank"><span className="fab fa-twitter fa-fw"></span> Tweet</a>
+              <a className="button tweet" href={`https://twitter.com/intent/tweet?text="${this.state.randomQuote.quote}" — ${this.state.randomQuote.source}`} target="_blank"><span className="fab fa-twitter fa-fw"></span> Tweet</a>
             </div>
           </div>
           <button type="button" className="button new-quote" onClick={() => this.getQuote()}>New Quote</button>
