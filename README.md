@@ -15,6 +15,7 @@ My project for the [Build a Random Quote Machine challenge](https://learn.freeco
 * AJAX
 * [EJS](https://ejs.co)
 * [Babel](https://babeljs.io)
+* [dotenv](https://github.com/motdotla/dotenv)
 * [Normalize.css](https://necolas.github.io/normalize.css)
 * [Font Awesome](https://fontawesome.com)
 * [Google Fonts](https://fonts.google.com)
