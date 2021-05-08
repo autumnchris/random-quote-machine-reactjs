@@ -11,7 +11,7 @@ My project for the [Build a Random Quote Machine challenge](https://learn.freeco
 * [React.js](https://reactjs.org)
 * [Webpack](https://webpack.js.org)
 * [Sass](http://sass-lang.com)
-* [axios](https://github.com/axios/axios)
+* [Axios](https://axios-http.com)
 * AJAX
 * [EJS](https://ejs.co)
 * [Babel](https://babeljs.io)
