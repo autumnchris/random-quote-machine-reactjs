@@ -4,6 +4,7 @@
 
 html {
   background: transparent;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: change-color($black, $lightness: 20%);
   height: 100%;
@@ -11,8 +12,10 @@ html {
   text-align: center;
   body {
     background: change-color($black, $lightness: 100%);
+    background: -o-linear-gradient(330deg, rgba(change-color($teal, $lightness: 86%), 0.2), change-color($black, $lightness: 100%)) fixed;
     background: linear-gradient(120deg, rgba(change-color($teal, $lightness: 86%), 0.2), change-color($black, $lightness: 100%)) fixed;
     min-height: 100%;
+    -ms-scroll-chaining: none;
     overscroll-behavior: none;
     padding: 0 20px;
     position: relative;
@@ -24,6 +27,8 @@ html {
     }
     footer {
       background: change-color($teal, $lightness: 86%);
+      background: -webkit-gradient(linear, left top, right top, from(change-color($teal, $lightness: 86%)), to(change-color($teal, $lightness: 95%))) fixed;
+      background: -o-linear-gradient(left, change-color($teal, $lightness: 86%), change-color($teal, $lightness: 95%)) fixed;
       background: linear-gradient(to right, change-color($teal, $lightness: 86%), change-color($teal, $lightness: 95%)) fixed;
       bottom: 0;
       font-size: 0.8rem;
@@ -40,6 +45,7 @@ html {
     h4,
     h5,
     h6 {
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-top: 0;
     }
@@ -57,6 +63,7 @@ button,
 button:hover,
 button:active,
 button:focus {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -79,6 +86,7 @@ input:focus,
 select:focus,
 textarea:focus,
 [tabindex]:focus {
+  -webkit-box-shadow: 0 0 3px 3px hsla(203, 95%, 62%, 0.8);
   box-shadow: 0 0 3px 3px hsla(203, 95%, 62%, 0.8);
   outline: none;
 }
@@ -124,6 +132,8 @@ h1 {
 
 .quote-container {
   background: change-color($teal, $lightness: 86%);
+  background: -webkit-gradient(linear, left top, left bottom, from(change-color($teal, $lightness: 86%)), to(change-color($teal, $lightness: 95%))) fixed;
+  background: -o-linear-gradient(change-color($teal, $lightness: 86%), change-color($teal, $lightness: 95%)) fixed;
   background: linear-gradient(change-color($teal, $lightness: 86%), change-color($teal, $lightness: 95%)) fixed;
   border-radius: 5px;
   margin: 20px auto;
@@ -189,5 +199,7 @@ noscript .info-message {
   position: absolute;
   text-align: center;
   top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
