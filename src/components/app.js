@@ -1,64 +1,65 @@
 import React from 'react';
 import axios from 'axios';
+import LoadingSpinner from './loading-spinner';
+import QuoteContainer from './quote-container';
 
 class App extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
+      quotes: [],
       randomQuote: {
         quote: '',
         source: ''
       },
+      isLoading: true,
       loadingError: false
     };
+    this.getQuote = this.getQuote.bind(this);
   }
 
-  getQuote() {
-    axios.get('/api/new-quote').then(randomQuote => {
+  fetchQuotes() {
+    axios.get('https://autumnchris-quotes.herokuapp.com/api/quotes').then(response => {
       this.setState({
-        randomQuote: {
-          quote: randomQuote.data.quote,
-          source: randomQuote.data.source
-        },
-        loadingError: false
+        quotes: response.data,
+        isLoading: false
       });
+      this.getQuote();
     }).catch(() => {
       this.setState({
+        isLoading: false,
         loadingError: true
       });
     });
   }
 
+  getQuote() {
+    const randomQuote = this.state.quotes[Math.floor(Math.random() * this.state.quotes.length)];
+    this.setState({
+      randomQuote: {
+        quote: randomQuote.quote,
+        source: randomQuote.source
+      }
+    });
+  }
+
   componentDidMount() {
-    this.getQuote();
+    this.fetchQuotes();
   }
 
   render() {
-
-    if (this.state.loadingError) {
-      return (
-        <p className="message error-message"><span className="fa fa-exclamation-circle fa-lg fa-fw"></span> Unable to load a new quote at this time.</p>
-      );
-    }
-    else {
-      return (
-        <React.Fragment>
-          <div className="quote-container">
-            <div className="quote">
-              <span className="fa fa-quote-left"></span>
-              <q> {this.state.randomQuote.quote} </q>
-              <span className="fa fa-quote-right"></span>
-            </div>
-            <div className="source">&mdash; {this.state.randomQuote.source}</div>
-            <div className="tweet-container">
-              <a className="button tweet" href={`https://twitter.com/intent/tweet?text="${this.state.randomQuote.quote}" — ${this.state.randomQuote.source}`} target="_blank"><span className="fab fa-twitter fa-fw"></span> Tweet</a>
-            </div>
-          </div>
-          <button type="button" className="button new-quote" onClick={() => this.getQuote()}>New Quote</button>
-        </React.Fragment>
-      );
-    }
+    return (
+      <React.Fragment>
+        <header>
+          <h1>Inspirational Quotes</h1>
+        </header>
+        <main>
+          {this.state.isLoading ? <LoadingSpinner /> : <QuoteContainer randomQuote={this.state.randomQuote} getQuote={this.getQuote} loadingError={this.state.loadingError} />}
+        </main>
+        <footer>Created by <a href="https://autumnbullard-portfolio.herokuapp.com" target="_blank">Autumn Bullard</a> &copy; {new Date().getFullYear()}</footer>
+      </React.Fragment>
+    );
   }
 }
 

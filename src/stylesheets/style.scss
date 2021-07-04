@@ -180,6 +180,17 @@ h1 {
   }
 }
 
+.loading-spinner {
+  -webkit-animation: spin 0.75s linear infinite;
+  animation: spin 0.75s linear infinite;
+  border: 4px solid $teal;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  height: 30px;
+  margin: 0 auto;
+  width: 30px;
+}
+
 .error-message {
   background: change-color($error-red, $lightness: 95%);
   border: 1px solid change-color($error-red, $lightness: 90%);
@@ -203,3 +214,25 @@ noscript .info-message {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+@-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
