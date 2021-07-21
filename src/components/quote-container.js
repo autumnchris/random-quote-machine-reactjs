@@ -1,28 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-const QuoteContainer = ({ randomQuote, getQuote, loadingError }) => {
+const QuoteContainer = ({ quotes }) => {
+  const [randomQuote, setRandomQuote] = useState({
+    quote: '',
+    source: ''
+  });
 
-  if (loadingError) {
-    return <p className="message error-message"><span className="fa fa-exclamation-circle fa-lg fa-fw"></span> Unable to load a new quote at this time.</p>;
+  useEffect(() => {
+    getQuote();
+  }, []);
+
+  function getQuote() {
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    setRandomQuote({
+      quote: randomQuote.quote,
+      source: randomQuote.source
+    });
   }
-  else {
-    return (
-      <React.Fragment>
-        <div className="quote-container">
-          <div className="quote">
-            <span className="fa fa-quote-left"></span>
-            <q> {randomQuote.quote} </q>
-            <span className="fa fa-quote-right"></span>
-          </div>
-          <div className="source">&mdash; {randomQuote.source}</div>
-          <div className="tweet-container">
-            <a className="button tweet" href={`https://twitter.com/intent/tweet?text="${randomQuote.quote}" — ${randomQuote.source}`} target="_blank"><span className="fab fa-twitter fa-fw"></span> Tweet</a>
-          </div>
+
+  return (
+    <React.Fragment>
+      <div className="quote-container">
+        <div className="quote">
+          <span className="fa fa-quote-left"></span>
+          <q> {randomQuote.quote} </q>
+          <span className="fa fa-quote-right"></span>
         </div>
-        <button type="button" className="button new-quote" onClick={() => getQuote()}>New Quote</button>
-      </React.Fragment>
-    );
-  }
+        <div className="source">&mdash; {randomQuote.source}</div>
+        <div className="tweet-container">
+          <a className="button tweet" href={`https://twitter.com/intent/tweet?text="${randomQuote.quote}" — ${randomQuote.source}`} target="_blank"><span className="fab fa-twitter fa-fw"></span> Tweet</a>
+        </div>
+      </div>
+      <button type="button" className="button new-quote" onClick={() => getQuote()}>New Quote</button>
+    </React.Fragment>
+  );
 }
 
 export default QuoteContainer;
