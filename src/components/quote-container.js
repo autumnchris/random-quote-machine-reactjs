@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const QuoteContainer = ({ quotes }) => {
-  const [randomQuote, setRandomQuote] = useState({
-    quote: '',
-    source: ''
-  });
+  const [randomQuote, setRandomQuote] = useState({});
 
   useEffect(() => {
     getQuote();
@@ -12,9 +9,12 @@ const QuoteContainer = ({ quotes }) => {
 
   function getQuote() {
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    setRandomQuote({
-      quote: randomQuote.quote,
-      source: randomQuote.source
+    setRandomQuote(prevRandomQuote => {
+      return {
+        ...prevRandomQuote,
+        quote: randomQuote.quote,
+        source: randomQuote.source
+      };
     });
   }
 
