@@ -9,10 +9,10 @@ const App = () => {
   const [loadingStatus, setLoadingStatus] = useState(true);
 
   useEffect(() => {
-    fetchData();
+    fetchQuotes();
   }, []);
 
-  function fetchData() {
+  function fetchQuotes() {
     axios.get('https://autumnchris-quotes.herokuapp.com/api/quotes').then(response => {
       setQuotes(response.data);
       setLoadingStatus(false);
