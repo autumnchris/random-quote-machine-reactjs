@@ -17,6 +17,7 @@ const App = () => {
       setQuotes(response.data);
       setLoadingStatus(false);
     }).catch(() => {
+      setQuotes([]);
       setLoadingStatus(false);
     });
   }
