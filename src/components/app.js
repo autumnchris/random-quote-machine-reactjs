@@ -13,7 +13,7 @@ const App = () => {
   }, []);
 
   function fetchQuotes() {
-    axios.get('https://autumnchris-quotes.herokuapp.com/api/quotes').then(response => {
+    axios.get('https://autumnchris-quotes-api.onrender.com/api/quotes').then(response => {
       setQuotes(response.data);
       setLoadingStatus(false);
     }).catch(() => {
