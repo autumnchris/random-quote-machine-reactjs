@@ -22,13 +22,13 @@ const QuoteContainer = ({ quotes }) => {
     <React.Fragment>
       <div className="quote-container">
         <div className="quote">
-          <span className="fa fa-quote-left"></span>
+          <span className="fa fa-quote-left" aria-hidden="true"></span>
           <q> {randomQuote.quote} </q>
-          <span className="fa fa-quote-right"></span>
+          <span className="fa fa-quote-right" aria-hidden="true"></span>
         </div>
         <div className="source">&mdash; {randomQuote.source}</div>
         <div className="tweet-container">
-          <a className="button tweet" href={`https://twitter.com/intent/tweet?text="${randomQuote.quote}" — ${randomQuote.source}`} target="_blank"><span className="fab fa-twitter fa-fw"></span> Tweet</a>
+          <a className="button tweet" href={`https://twitter.com/intent/tweet?text="${randomQuote.quote}" — ${randomQuote.source}`} target="_blank"><span className="fab fa-twitter fa-fw" aria-hidden="true"></span> Tweet</a>
         </div>
       </div>
       <button type="button" className="button new-quote" onClick={() => getQuote()}>New Quote</button>
