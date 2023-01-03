@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import LoadingSpinner from './Loading-Spinner';
-import ErrorMessage from './Error-Message';
-import QuoteContainer from './Quote-Container';
+import LoadingSpinner from './LoadingSpinner';
+import ErrorMessage from './ErrorMessage';
+import QuoteContainer from './QuoteContainer';
 
 const App = () => {
   const [quotes, setQuotes] = useState([]);
