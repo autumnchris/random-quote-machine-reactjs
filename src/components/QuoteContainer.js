@@ -4,18 +4,26 @@ const QuoteContainer = ({ quotes }) => {
   const [randomQuote, setRandomQuote] = useState({});
 
   useEffect(() => {
-    getQuote();
+    getNewQuote();
   }, []);
 
-  function getQuote() {
-    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    setRandomQuote(prevRandomQuote => {
-      return {
-        ...prevRandomQuote,
-        quote: randomQuote.quote,
-        source: randomQuote.source
-      };
-    });
+  function getNewQuote() {
+    const newRandomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    
+
+    if (randomQuote._id !== newRandomQuote._id) {
+      setRandomQuote(prevRandomQuote => {
+        return {
+          ...prevRandomQuote,
+          quote: newRandomQuote.quote,
+          source: newRandomQuote.source,
+          _id: newRandomQuote._id
+        };
+      });
+    }
+    else {
+      getNewQuote();
+    }
   }
 
   return (
@@ -31,7 +39,7 @@ const QuoteContainer = ({ quotes }) => {
           <a className="button tweet" href={`https://twitter.com/intent/tweet?text="${randomQuote.quote}" — ${randomQuote.source}`} target="_blank"><span className="fab fa-twitter fa-fw" aria-hidden="true"></span> Tweet</a>
         </div>
       </div>
-      <button type="button" className="button new-quote" onClick={() => getQuote()}>New Quote</button>
+      <button type="button" className="button new-quote" onClick={() => getNewQuote()}>New Quote</button>
     </React.Fragment>
   );
 }
