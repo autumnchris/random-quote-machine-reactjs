@@ -8,8 +8,12 @@ Inspired by the [Build a Random Quote Machine challenge](https://learn.freecodec
 
 ## Built With
 * [React.js](https://reactjs.org)
-* [Webpack](https://webpack.js.org)
 * [Sass](http://sass-lang.com)
+* JavaScript
+* CSS3
+* HTML5
+* [Node.js](https://nodejs.org/en)
+* [Webpack](https://webpack.js.org)
 * [Axios](https://axios-http.com)
 * AJAX
 * [Babel](https://babeljs.io)
