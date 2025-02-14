@@ -36,7 +36,9 @@ const QuoteContainer = ({ quotes }) => {
         </div>
         <div className="source">&mdash; {randomQuote.source}</div>
       </div>
-      <button type="button" className="button new-quote" onClick={() => getNewQuote()}>New Quote</button>
+      <div className="button-group">
+        <button type="button" className="button new-quote" onClick={() => getNewQuote()}>New Quote</button>
+      </div>
     </React.Fragment>
   );
 }
